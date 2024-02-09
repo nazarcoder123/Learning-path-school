@@ -1,0 +1,17 @@
+rasa
+rasa_nlu
+rasa[spacy]
+slackclient
+python-dotenv
+uvicorn
+fastapi
+httpx
+slack_sdk
+SpeechRecognition
+gTTS
+python-multipart
+langdetect
+translate
+google-cloud-translate
+email_validator
+rasa-sdk

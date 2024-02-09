@@ -1,0 +1,96 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+   - hey
+   - hello
+   - hi
+
+- intent: goodbye
+  examples: |
+   - cu
+   - good by
+   - cee you later
+
+
+- intent: about_lps
+  examples: |
+   - tell me about lps 
+
+- intent: about_facilities
+  examples: |
+   - tell me about facilities
+
+- intent: response
+  examples: |
+   - will do me a favour
+
+- intent: select
+  examples: |
+   - Plz Select our state 
+    
+- intent: alabama
+  examples: |
+   - Alabama learning Pathways
+
+- intent: arizona
+  examples: |
+   - Arizona learning Pathways
+
+- intent: california
+  examples: |
+   - california learning Pathways
+
+- intent: exit
+  examples: |
+   - thanks for visting us
+
+- intent: main_menu
+  examples: |
+   - back to main menu
+
+- intent: contact_us
+  examples: |
+   - I want to contact to learning path way school
+
+- intent: transportation
+  examples: |
+   - we also provide transport facilities
+
+- intent: about_learning_path
+  examples: |
+   - we provide good education
+
+- intent: admission
+  examples: |
+   - I need a query about admission
+
+- intent: career
+  examples: |
+   - I want to join learning path
+
+- intent: inform 
+  examples: |
+   - [9611215782](number)
+   - [7483282896](number)
+   - [9638527410](number)
+   - [nazarchess14@gmail.com](email)
+   - [mohammed@gmail.com](email)
+   - [sahil123@gmail.com](email)
+   - [Nazar Mohammed](name)
+   - [ali](name)
+   - [taran](name)
+   - [sahil](name)
+
+- intent: ask_phone
+  examples: |
+   - Enter your phone number
+
+- intent: ask_email
+  examples: |
+   - plz enter your email
+
+- intent: ask_name
+  examples: |
+   - plz enter full name

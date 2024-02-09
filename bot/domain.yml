@@ -1,0 +1,268 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - response
+  - alabama
+  - california
+  - arizona
+  - exit
+  - main_menu
+  - select
+  - contact_us
+  - transportation
+  - about_learning_path
+  - admission
+  - career
+  - inform
+  - ask_phone
+  - ask_email
+  - ask_name
+
+entities:
+  - name 
+  - phone
+  - email
+
+slots:
+  name:
+   type: text
+   influence_conversation: true
+   mappings:
+   - type: from_entity
+     entity: name
+
+  phone:
+   type: text
+   influence_conversation: true
+   mappings:
+   - type: from_entity
+     entity: phone
+
+  email:
+   type: text
+   influence_conversation: true
+   mappings:
+   - type: from_entity
+     entity: email
+
+forms:
+  simple_form:
+    required_slots:
+      - name
+      - phone
+      - email
+
+responses:
+  utter_ask_phone:
+  - text: |
+      Can I get your phone number 
+
+  utter_ask_email:
+  - text: |
+      Can I get your email id 
+
+  utter_ask_name:
+  - text: |
+      Can I get your full name 
+
+  utter_greet:
+  - text: |
+      Hey! How are you?
+
+  utter_goodbye:
+  - text: |
+      Bye
+
+  utter_response:
+  - text: |
+        Hey! Good Evening! I am your virtual assistant. Welcome to Learning Paths School. It is a CBSE affiliated co-educational school that uses a variety of teaching methodologies to cater to the varied needs of students. We aim to empower students to be responsible, independent thinkers and lifelong learners with the right attitude to be successful in today's dynamic world.
+        plz select anyone option to from the below to move further
+    image: "E:/Learning path school/bot/UI/images/option-img.jpg"
+    buttons:
+      - title: "-- Plz Click Here To Select your branch --"
+        payload: "/select"
+
+  utter_select:
+  - text: |
+              
+    buttons:
+      - title: "Learning Path school - alabama"
+        payload: "/alabama"
+      - title: "Learning Path school - arizona"
+        payload: "/arizona"
+      - title: "Learning Path school - california"
+        payload: "/california"
+      - title: "Exit"
+        payload: "/exit" 
+
+  utter_california:
+  - text: |
+       A learning path is a collection of courses that are linked together to help learners progress through a particular subject or program. It allows users to enroll in multiple courses at once, saving time.
+    buttons:
+      - title: "Career"
+        payload: "/career"
+      - title: "Admission"
+        payload: "/admission"
+      - title: "About Learning Path School"
+        payload: "/about_learning_path"
+      - title: "Transportation Facilities"
+        payload: "/transportation"
+      - title: "Contact us"
+        payload: "/contact_us"
+      - title: "Main Menu"
+        payload: "/main_menu"
+      - title: "Exit"
+        payload: "/exit"   
+
+  utter_arizona:
+  - text: |
+       The Learning Path is a program that helps students improve their reading, writing, math, and life skills. The program helps students develop their love and ability to learn
+    buttons:
+      - title: "Career"
+        payload: "/career"
+      - title: "Admission"
+        payload: "/admission"
+      - title: "About Learning Path School"
+        payload: "/about_learning_path"
+      - title: "Transportation Facilities"
+        payload: "/transportation"
+      - title: "Contact us"
+        payload: "/contact_us"
+      - title: "Main Menu"
+        payload: "/main_menu"
+      - title: "Exit"
+        payload: "/exit" 
+
+  utter_alabama:
+  - text: |
+       Alabama learning Pathways is designed to help individuals who work in various early childhood and school- age care settings identify appropriate professional preparation and ongoing professional development that is specific to child development and early childhood education.
+    buttons:
+      - title: "Career"
+        payload: "/career"
+      - title: "Admission"
+        payload: "/admission"
+      - title: "About Learning Path School"
+        payload: "/about_learning_path"
+      - title: "Transportation Facilities"
+        payload: "/transportation"
+      - title: "Contact us"
+        payload: "/contact_us"
+      - title: "Main Menu"
+        payload: "/main_menu"
+      - title: "Exit"
+        payload: "/exit"   
+  
+  utter_main_menu:
+  - text: |
+
+    buttons:
+      - title: "--Select An Option --"
+        payload: "/select" 
+      - title: "Exit"
+        payload: "/exit"  
+
+  utter_exit:
+  - text: |
+      Thanks you for using our virtual assistant. Have a nice day!
+
+  utter_contact_us:
+  - text: |
+      we are in punjab Mohali sec 67, Mohali  
+      Telephone: 0172-5134300
+      Mobile: 098-780-07553 (for admissions only)
+      Email: admn@learningpaths.in 
+      principal@learningpaths.in
+      contact@learningpaths.in
+    buttons:
+      - title: "Career"
+        payload: "/career"
+      - title: "Admission"
+        payload: "/admission"
+      - title: "Contact us"
+        payload: "/contact_us"
+      - title: "Transportation Facilities"
+        payload: "/transportation"
+      - title: "About Learning Path School"
+        payload: "/about_learning_path"
+      - title: "Main Menu"
+        payload: "/main_menu"
+      - title: "Exit"
+        payload: "/exit" 
+
+  utter_transportation:
+  - text: |
+      Learning Paths School provides a safe and child friendly transport system for students. The school has a fleet of Non AC buses catering to students from Chandigarh, Mohali, Kharar, Kurali, Landran, and Zirakpur.
+      The bus drivers are quite experienced and and also go regular medical check up and training. The School administrative staff conducts training classes and regular medical check up for the bus maids, drivers and conductors with special emphasis on safety and security.
+    image: "E:/Learning path school/bot/UI/images/1_1694153636.jpg"  
+    buttons:
+      - title: "Career"
+        payload: "/career"
+      - title: "Admission"
+        payload: "/admission"
+      - title: "Contact us"
+        payload: "/contact_us"
+      - title: "About Learning Path School"
+        payload: "/about_learning_path"
+      - title: "Main Menu"
+        payload: "/main_menu"
+      - title: "Exit"
+        payload: "/exit"
+
+  utter_about_learning_path:
+  - text: |
+      Learning Paths School is a CBSE affiliated co-educational school that uses a variety of teaching methodologies to cater to the varied needs of students. We aim to empower students to be responsible, independent thinkers and life long learners with the right attitude to be successful in today dynamic world.
+    buttons:
+      - title: "Career"
+        payload: "/career"
+      - title: "Admission"
+        payload: "/admission"
+      - title: "Transportation Facilities"
+        payload: "/transportation"
+      - title: "Contact us"
+        payload: "/contact_us"
+      - title: "Main Menu"
+        payload: "/main_menu"
+      - title: "Exit"
+        payload: "/exit"
+
+  utter_admission:
+  - text: |
+      Learning Paths School offers a welcoming environment for students from diverse backgrounds, fostering continuous learning and growth. With a 21st-century curriculum, admissions are open year-round, but peak in Jan-Feb. Plan ahead to secure a spot. Admissions team starts reviewing applications in January. Schedule a campus visit and meet our Admission Counsellor for details on curriculum and activities.
+    image: "E:/Learning path school/bot/UI/images/child-ovrview.jpg"
+    buttons:
+      - title: "Career"
+        payload: "/career"
+      - title: "About Learning Path School"
+        payload: "/about_learning_path"
+      - title: "Transportation Facilities"
+        payload: "/transportation"
+      - title: "Contact us"
+        payload: "/contact_us"
+      - title: "Main Menu"
+        payload: "/main_menu"
+      - title: "Exit"
+        payload: "/exit"
+
+  utter_career:
+  - text: |
+      Learning Paths School is a meritocratic institution that offers opportunities to build a valuable and rewarding career. At LPS, your talents are honed, your achievements are recognized, and your contributions are valued. We are constantly on the lookout for bright, ambitious team players who believe in the same values as us. If you are interested, send your résumé to : principal@learningpaths.in
+    buttons:
+      - title: "About Learning Path School"
+        payload: "/about_learning_path"
+      - title: "Transportation Facilities"
+        payload: "/transportation"
+      - title: "Contact us"
+        payload: "/contact_us"
+      - title: "Main Menu"
+        payload: "/main_menu"
+      - title: "Exit"
+        payload: "/exit"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+- action_say_data

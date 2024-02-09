@@ -1,0 +1,98 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Hello how are you dear sister and mother
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: welcome message
+  steps:
+  - intent: response
+  - action: utter_response 
+
+- rule: selecting option message
+  steps:
+  - intent: select
+  - action: utter_select
+
+- rule: alamaba
+  steps:
+  - intent: alabama
+  - action: utter_alabama
+
+- rule: arizona
+  steps:
+  - intent: arizona
+  - action: utter_arizona
+
+- rule: california
+  steps:
+  - intent: california
+  - action: utter_california
+
+- rule: thanks for visting us
+  steps:
+  - intent: exit
+  - action: utter_exit
+
+- rule: back to main menu
+  steps:
+  - intent: main_menu
+  - action: utter_main_menu
+
+- rule: contact us
+  steps:
+  - intent: contact_us
+  - action: utter_contact_us
+
+- rule: transport
+  steps:
+  - intent: transportation
+  - action: utter_transportation
+
+- rule: learning path school
+  steps:
+  - intent: about_learning_path
+  - action: utter_about_learning_path
+
+- rule: details about there career
+  steps:
+  - intent: career
+  - action: utter_career
+
+# - rule: details about admission
+#   steps:
+#   - intent: admission
+#   - action: utter_admission
+
+# To activate the form
+
+- rule: activate form
+  steps:
+  - intent: admission
+  - action: simple_form
+  - active_loop: simple_form
+
+# To de-activate the form
+
+- rule: submit form
+  condition:
+  - active_loop: simple_form
+  steps:
+  - action: simple_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_say_data
+
+
+
+
+
